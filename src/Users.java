@@ -27,23 +27,38 @@ public class Users {
     // Delete user from repository
     // Throw  RuntimeException if the user is not in the list
     public void remove(IUser user)  {
-        for(int i=0;i<=count();i++){
-            if(user==user)
-        }throws RuntimeException
+        for (int index = 0; index < size; index++){
+            if(user.equals(userList[index])){
+                userList[index]=null;
+                break;
+            }
+        }throw RuntimeException;
     }
 
     // Return true if the user is in the list
     public boolean exists(IUser user) {
+        for (int index = 0; index < size; index++){
+            if(user.equals(userList[index])){
+                return true;
+                break;
+            }
+        }
         return false;
     }
 
     // Return number of user in the list
     public int count() {
-        return 0;
+        return size;
     }
 
     // Return number of user in the list, according to type
     public int countByType(int type) {
-        return 0;
+        int typecount;
+        for (int index = 0; index < size; index++){
+            if(usertype=type){
+                typecount++;
+            }
+        }
+        return typecount;
     }
 }
