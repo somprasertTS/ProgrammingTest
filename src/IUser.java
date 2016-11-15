@@ -1,4 +1,4 @@
-public interface IUser {
+public interface IUser extends Users{
     public static final int USER_STUDENT = 1;
     public static final int USER_TEACHER = 2;
     public String getName();

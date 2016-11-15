@@ -1,26 +1,31 @@
 public class User implements IUser {
     @Override
     public String getName() {
-        return null;
+        return username;
     }
 
     @Override
     public String setName(String name) {
-        return null;
+        username = name;
     }
 
     @Override
     public String setPassword(String password) {
-        return null;
+        userpass=password;
+
     }
 
     @Override
     public boolean isPasswordCorrect(String password) {
-        return false;
+        if(userpass==password){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     @Override
     public int getType() {
-        return 0;
+        return usertype;
     }
 }
